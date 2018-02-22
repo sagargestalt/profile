@@ -57,19 +57,24 @@
                             <div ng-if="forrmsubmited && !fname" class="validateerror">Please Enter Your Name!</div>
                         </div>
                     </div>
-                    <div class="col-xs-12">
+                    <!--<div class="col-xs-12">
                         <div class="form-group" ng-class="{'has-error':forrmsubmited && applyjobform.name.$invalid}">
                             <select name="industry" id="industry" name="ind" class="form-control frmNew" ng-change="getCategory(industry)"  ng-options="taskp.ID as taskp.INDUSTRY for taskp in allindustry" ng-model="industry">
                                 <option value="">Industry</option>
                             </select>
                         </div>
+                        </div>-->
                         <div class="col-xs-12">
                             <div class="form-group" ng-class="{'has-error':forrmsubmited && applyjobform.name.$invalid}">
-                                <div>selection is: {{chosenPlace}}</div>
-                                <div>details object is: {{chosenPlaceDetails}}</div>
-                            <div><input ng-model="chosenPlace" details="chosenPlaceDetails" googleplace/></div>
+                            <input class="form-control" placeholder="Location" ng-model="chosenPlace" details="chosenPlaceDetails" googleplace/>
                         </div>
-                    </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="form-group" ng-class="{'has-error':forrmsubmited && applyjobform.name.$invalid}">
+                            <textarea class="form-control" placeholder="Profile discription" rows="6" ng-model="discription"  />
+                        </div>
+                        </div>
+                   
 
         </div>
     
