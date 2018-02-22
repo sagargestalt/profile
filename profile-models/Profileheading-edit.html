@@ -1,0 +1,86 @@
+<style>
+    .modal-dialog {
+        padding-top: 25%;
+    }
+    .modal-content {
+      background-color: #f7f7f7 !important;
+      padding: 0;
+      float: left;
+      margin-top: -25%;
+      width: initial;
+      border: none !important;
+      border-radius: 2px !important;
+      outline: 0;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important; 
+    }
+    
+    @media (min-width: 800px) {
+        .modal-dialog {
+            width: 750px !important;
+        }
+    
+        .modal-content {
+            width: 100%;
+            border: none;
+        }
+    }
+    
+    @media (min-width: 993px) {
+        .modal-content {
+            padding: 0;
+            float: left;margin-top: -30%;
+            /*transform: translateY(-50%);*/
+        }   
+    }
+    </style>
+    
+    <div class="profile profileCoverImg" id="profile_image_modal">
+      <div class="modal-header"> 
+        <input name="user_id" id="user_id" value="13883" type="hidden"> 
+        <button type="button" class="close" ng-click="closemodel()" aria-hidden="true">×</button>
+        <h4 class="modal-title">Profile heading</h4>
+      </div>
+    
+      <div class="modal-body pro_pic_edit_box_content_body">
+
+            <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-group" ng-class="{'has-error':forrmsubmited && applyjobform.name.$invalid}">
+                            <input type="text" class="form-control" name="name" placeholder="Full Name*" ng-model="fname" />
+                            <div ng-if="forrmsubmited && !fname" class="validateerror">Please Enter Your Name!</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group" ng-class="{'has-error':forrmsubmited && applyjobform.name.$invalid}">
+                            <input type="text" class="form-control" name="name" placeholder="Headline*" ng-model="fname" />
+                            <div ng-if="forrmsubmited && !fname" class="validateerror">Please Enter Your Name!</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group" ng-class="{'has-error':forrmsubmited && applyjobform.name.$invalid}">
+                            <select name="industry" id="industry" name="ind" class="form-control frmNew" ng-change="getCategory(industry)"  ng-options="taskp.ID as taskp.INDUSTRY for taskp in allindustry" ng-model="industry">
+                                <option value="">Industry</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="form-group" ng-class="{'has-error':forrmsubmited && applyjobform.name.$invalid}">
+                                <div>selection is: {{chosenPlace}}</div>
+                                <div>details object is: {{chosenPlaceDetails}}</div>
+                            <div><input ng-model="chosenPlace" details="chosenPlaceDetails" googleplace/></div>
+                        </div>
+                    </div>
+
+        </div>
+    
+      
+    
+    
+    
+     
+    
+      
+    
+      
+   
+    </div>
