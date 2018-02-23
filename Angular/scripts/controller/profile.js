@@ -153,4 +153,17 @@ $scope.uploads = function (myCroppedImage1) {
           });
       }
   };
+}]).directive('responsiveTabs', [ function() {
+    return {
+        restrict: "A",
+        link: function (scope, element, attrs) {
+
+            element.responsiveTabs({
+                startCollapsed: false
+              });
+        
+
+        }
+
+    }
 }]);
