@@ -4937,11 +4937,11 @@ we're going to style the label instead */
 .imgChngBtn.coverImageButton > .atzIcon {
     top: 4px;
     left: 5px;
-    background-size: 170px 170px;
-    background-position: -70.5px -40px;
+    background-size: 173px 173px;
+    background-position: -74px -44px;
     height: 20px;
     width: 25px;
-} 
+}
   
 
 .imgChngBtn.coverImageButton > span {
@@ -4955,12 +4955,12 @@ we're going to style the label instead */
     color: #aeaeae;
 }
 
-.profileCoverImgWrap:hover .imgChngBtn.coverImageButton > .atzIcon{
-    background-size: 140px 140px;
-    background-position: -58px -34px;
+.profileCoverImgWrap:hover .imgChngBtn.coverImageButton > .atzIcon {
+    background-size: 146px 146px;
+    background-position: -61px -37px;
     height: 15px;
-    width: 20px;
-}     
+    width: 23px;
+}   
 
 .profileCoverImgWrap:hover .imgChngBtn.coverImageButton > span {
     visibility: visible;
@@ -5039,7 +5039,7 @@ we're going to style the label instead */
     top: 12px;
     left: 12px;
     background-size: 180px 180px;
-    background-position: -70.5px -40px;
+    background-position: -75px -42px;
     height: 25px;
     width: 30px;
 }
@@ -5058,7 +5058,7 @@ we're going to style the label instead */
 
 .profileImgWrap:hover .imgChngBtn.profilePicButton > .atzIcon{
     background-size: 140px 140px;
-    background-position: -58px -34px;
+    background-position: -60px -34px;
     height: 18px;
     width: 20px;
 }     
@@ -5084,12 +5084,24 @@ we're going to style the label instead */
     display: table-cell;
     text-align: center;
     width: 33.333333%;
-    padding-top: 10px;
 }
 .profileOptns .optn.optn2 {
     border-right: 1px solid #959595;
     border-left: 1px solid #959595;
 }
+
+.profileOptns .optn button {
+    background-color: transparent;
+    border: none;
+    padding-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+.profileOptns .optn p {
+    line-height: 1.4;
+}
+
 .profileOptns .optn p > span{
     display: block;
 }
@@ -5097,15 +5109,15 @@ we're going to style the label instead */
 /*ATZ NEW PROFILE ICONS*/
 .atzIcon {
     display: inline-block;
-    background-image: url('../NewDesignSrc/img/Profile-Icons.png');
+    background-image: url('../NewDesignSrc/img/atz-icn-set/Profile-Icons.png');
     vertical-align: middle;
-    background-size: 140px 140px;
+    background-size: 146px 146px;
 }
 
 .atzIcon-share {
     width: 17px;
-    height: 16px;
-    background-position: -7px -7px;
+    height: 18px;
+    background-position: -7px -6px;
 }
 
 .atzIcon-camera {
@@ -5118,6 +5130,18 @@ we're going to style the label instead */
     background-position: -199px -6px;
     height: 18px;
     width: 20px;
+}
+
+.atzIcon-bars {
+    background-position: -267px -35px;
+    height: 17px;
+    width: 19px;
+}
+
+.atzIcon-pencil {
+    background-position: -239px -36px;
+    height: 18px;
+    width: 18px;
 }
 
 /*ATZ NEW PROFILE ICONS*/
@@ -5242,7 +5266,124 @@ we're going to style the label instead */
     visibility: visible;
 }
 
+.toggleWrap .tab-content {
+    padding: 0;
+}
 
+.toggleWrap ul.nav {
+    border: none;
+}  
+
+.toggleWrap ul.nav > li.uib-tab {
+    width: 50%;
+    text-align: center;
+    border: none;
+}  
+
+.toggleWrap ul.nav > li.uib-tab > a {
+    margin: 0;
+    border: none;
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    font-family: Arial;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 0.929;
+}
+
+.toggleWrap ul.nav > li.uib-tab:first-child:not(last-child) > a {
+    border-radius: 4px 0 0 4px;
+} 
+
+.toggleWrap ul.nav > li.uib-tab:last-child:not(first-child) > a {
+    border-radius: 0 4px 4px 0;
+} 
+
+.toggleWrap ul.nav > li.uib-tab.active > a, 
+.toggleWrap ul.nav > li.uib-tab.active > a:focus, 
+.toggleWrap ul.nav > li.uib-tab.active > a:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+    background-color: #fa3443;
+    border:1px solid #fa3443;
+}
+
+.toggleWrap ul.nav > li.uib-tab.active > a:after {
+    content: " ";
+    position: absolute;
+    bottom: -17px;
+    margin-top: 0;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #fa3443 transparent transparent transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.profileData > ul.dataTabs {
+    list-style: none;
+    border-radius: 2px;
+    float: left;
+    width: 100%;
+}
+
+.profileData > ul.dataTabs > li {
+    background-color: #414141;
+    padding: 6px 0px;
+    color: #ffffff;
+    font-size: 13px;
+    display: table-cell;
+    /*width: 1%;*/
+    text-align: center;
+}
+
+.profileData > ul.dataTabs > li:first-child {
+    border-radius: 2px 0 0 2px;
+}
+
+.profileData > ul.dataTabs > li:last-child {
+    border-radius: 0 2px 2px 0;
+}
+
+.profileData > ul.dataTabs > li.one {
+    width: 50px;
+}
+
+.profileData > ul.dataTabs > li.two {
+    width: 80px;
+}
+
+.profileData > ul.dataTabs > li.three {
+    width: 95px;
+}
+
+.profileData > ul.dataTabs > li.four {
+    width: 80px;
+}
+
+.profileData > ul.dataTabs > li.five {
+    width: 85px;
+}
+
+.profileData > ul.dataTabs > li.six {
+    width: 90px;
+}
+
+.profileData > ul.dataTabs > li.seven {
+    width: 100px;
+}
+
+.profileData > ul.dataTabs > li.eight {
+    width: 115px;
+}
+
+.profileData > ul.dataTabs > li.nine {
+    width: 140px;
+}
 
 /*New Profile Modal Style*/
 .profile {
