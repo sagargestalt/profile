@@ -139,7 +139,7 @@
 
 
 
-<!-- <link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/jquery.responsive-tabs/1.5.1/responsive-tabs.css'>
+ <link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/jquery.responsive-tabs/1.5.1/responsive-tabs.css'>
 
 
 
@@ -276,13 +276,13 @@ button {
 
   cursor: pointer;
 } 
-   </style> -->
+   </style> 
 
 
 
 
 
-<div class="container" ng-app="myApp">
+<div class="container">
   <div class="row">
     <div class="col-lg-12">
       <div id="responsiveTabs" responsive-tabs>
@@ -299,30 +299,9 @@ button {
     </div>
   </div>
 </div>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js'></script>
-<script src='http://cdn.jsdelivr.net/jquery.responsive-tabs/1.5.1/jquery.responsiveTabs.min.js'></script>
-   <script type="text/javascript">
+
+
    
-     var myApp = angular.module('myApp', []);
-
-angular
-  .module('myApp')
-  .directive('responsiveTabs', responsiveTabs);
-
-function responsiveTabs() {
-  return {
-    restrict: 'A',
-    link: function(scope, element, attrs) {
-      element.responsiveTabs({
-        startCollapsed: false
-      });
-
-    }
-  };
-}
-
-   </script>
 </section>
 
 <!-- $( document ).ready(function() {

@@ -255,7 +255,8 @@
       <script src="bower_components/angular-button-spinner/dist/angular-button-spinner.min.js?version=1.1"></script>
 	  <script src="bower_components\angular-read-more\dist\readmore.min.js?version=1.1"></script> 
 	  <script src="bower_components\ui-cropper\compile\unminified\ui-cropper.js?version=1.1"></script> 
-
+	  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6_yB15T38Ezwn4GyzD4Psm4Cm0sqRrLE&libraries=places"></script>
+	  <script src='http://cdn.jsdelivr.net/jquery.responsive-tabs/1.5.1/jquery.responsiveTabs.min.js'></script>
     </head>
     <body class="flexcroll">
         <!--**************************************** Loader Section ****************************************-->
