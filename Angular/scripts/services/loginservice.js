@@ -152,4 +152,18 @@ factory('portfolioservice', ['$resource','$rootScope', function($resource,$rootS
       }
     };
     return obj;
-  });
+  }).
+  factory('profileService', ['$resource','$rootScope', function($resource,$rootScope) {
+         var baseurls = 'http://staging.artistize.com/PROFILEV1/';
+  
+         return{
+          getprofiledata:$resource(baseurls+'Profile/get_profile', {} ),
+          login:$resource(baseurls+'Index/login', {} ),
+          ForgetPassword:$resource(baseurls+'Index/forgot', {} ),
+          signupUser:$resource(baseurls+'Index/Registration', {} ),
+          industryGet:$resource(baseurls+'Index/get_industry', {},{isArray:false}),
+          getCategorys:$resource(baseurls+'Index/get_category', {},{isArray:false}),
+          resendRequest:$resource(baseurls+'Index/resendVerificationMail', {} ),
+      };
+  
+  }])

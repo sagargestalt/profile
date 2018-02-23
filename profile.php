@@ -1,3 +1,7 @@
+<script type="text/javascript">
+var userhandle = '<?php echo $this->uri->segment(2); ?>';
+
+</script>
 <section id="profileSection" class="profileSection" ng-controller="profileCtrl">
   <div class="container">
 <!--     <div class="menuBarWrap col-xs-1" id="menuBarWrap">
@@ -18,7 +22,7 @@
     <div class="contentWrap" id="contentWrap">
       <div class="col-xs-12">
         <div class="profileCoverImgWrap">
-          <img id="CoverImg" src="upload/10/user_cover/1444824077_CoverImage.jpg" class="img-responsive"/>
+          <img id="CoverImg" ng-src="" class="img-responsive"/>
           <button ng-click="profileCoverimagemodel()" class="coverImageButton imgChngBtn"><i class="atzIcon atzIcon-camera"></i><span>Upload Cover Photo</span></button>
           <div class="panelCover col-md-offset-3 col-md-9 col-xs-12">
             <ul>
@@ -37,7 +41,7 @@
             <div class="row">
               <div class="col-md-12 col-xs-7 col-sm-5 profileImgWrap" id="profileImgWrap">
                 <div class="col-xs-12 profileImg padd-0">
-                  <img src="NewDesignSrc/img/male.jpg" id="profileImg" alt="">
+                  <img ng-src="{{personalData.PROFILE_IMAGE}}" id="profileImg" alt="">
                   <button class="profilePicButton imgChngBtn" ng-click="profileimagemodel()"><i class="atzIcon atzIcon-camera"></i><span>Change Profile Picture</span></button>
                 </div>
               </div>
@@ -70,10 +74,10 @@
           <div class="col-xs-12 col-md-9">
             <div class="row">           
               <div class="profileDescDetails col-xs-12 col-md-9">
-                <h1>Name of the User</h1> 
-                <h2>International BHARATANATYAM Dancer Performer & Choreographer</h2>
-                <p class="industry">Dancer</p>
-                <p class="location">New Delhi, India</p>
+                <h1>{{personalData.USER_NAME}}</h1> 
+                <h2>{{personalData.PROFESSIONAL_HEADLINE}}</h2>
+                <p class="industry">{{personalData.INDUSTRY_STR}}</p>
+                <p class="location">{{personalData.LOCATION}}</p>
                 <div class="downloadProfileNStrengthWrap col-xs-12">
                   <div class="progress btnProgress col-sm-5 col-xs-12">
                     <div class="progress-bar " style="min-width: 80%; width: 2%; position: relative;">
@@ -102,9 +106,7 @@
       <div class="col-xs-12 profileSummaryWrap">
         <div class="col-xs-12 profileSummary">
       
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+          <p>{{personalData.PROFILE_SUMMARY}}</p>
         </div>
       </div>
 
@@ -139,7 +141,7 @@
 
 
 
- <link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/jquery.responsive-tabs/1.5.1/responsive-tabs.css'>
+ <!--<link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/jquery.responsive-tabs/1.5.1/responsive-tabs.css'>
 
 
 
@@ -276,7 +278,7 @@ button {
 
   cursor: pointer;
 } 
-   </style> 
+   </style> -->
 
 
 
