@@ -1,4 +1,41 @@
-<div class="modal-content pro_pic_edit_box_content" id="profile_image_modal">
+<style>
+.modal-dialog {
+    padding-top: 25%;
+}
+.modal-content {
+  background-color: #f7f7f7 !important;
+  padding: 0;
+  float: left;
+  margin-top: -25%;
+  width: initial;
+  border: none !important;
+  border-radius: 2px !important;
+  outline: 0;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important; 
+}
+
+@media (min-width: 800px) {
+    .modal-dialog {
+        width: 750px !important;
+    }
+
+    .modal-content {
+        width: 100%;
+        border: none;
+    }
+}
+
+@media (min-width: 993px) {
+    .modal-content {
+        padding: 0;
+        float: left;margin-top: -30%;
+        /*transform: translateY(-50%);*/
+    }   
+}
+</style>
+
+<div class="profile profileCoverImg" id="profile_image_modal">
     <!--<script src="js/profile-image-crop.js"></script>-->
 <!--<script> 
 $(document).ready(function(){
@@ -10,61 +47,59 @@ $("#profile_pic_hover_edit").stop().slideUp("fast");
 }); 
 }); 
 </script> -->
-<form role="form" name="frmprofileimageupload" id="frmprofileimageupload" class="frmprofileimageupload">
-<div class="modal-header pro_pic_edit_box_content_header"> 
-<input name="user_id" id="user_id" value="13883" type="hidden"> 
-<button type="button" class="close" ng-click="closemodel()" aria-hidden="true">×</button>
+  <div class="modal-header"> 
+    <input name="user_id" id="user_id" value="13883" type="hidden"> 
+    <button type="button" class="close" ng-click="closemodel()" aria-hidden="true">×</button>
+    <h4 class="modal-title">Upload Cover Image</h4>
+  </div>
 
-<h4 class="modal-title">Confirmation</h4>
-</div>
-<div style="padding:15px 20px;font-weight600;font-size:18px ; color:#505050; ">Make sure you're looking your best...</div>
-<div class="modal-body pro_pic_edit_box_content_body">
-<!-- Upload image and data -->
-<div class="profile-upload-data" style="color:#505050;">
-    <input  type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1 " ngf-select ng-model="picFile" accept="image/*" ngf-pattern="'.jpg,.png,.jpeg,'" ngf-resize="{quality: 0.3}"  />
-    <!--<label  for="file-1" ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span  ng-hide="imagepath || picFile">Upload Cover Image</span><span ng-show="imagepath || picFile">Change Profile Image</span></label>-->
-</div>						
-<!-- Crop and preview -->
+  <div class="modal-body pro_pic_edit_box_content_body">
+    <!-- Upload image and data -->
+    <div class="profile-upload-data" style="color:#505050;">
+      <input  type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1 " ngf-select ng-model="picFile" accept="image/*" ngf-pattern="'.jpg,.png,.jpeg,'" ngf-resize="{quality: 0.3}"  />
+      <!--<label  for="file-1" ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span  ng-hide="imagepath || picFile">Upload Cover Image</span><span ng-show="imagepath || picFile">Change Profile Image</span></label>-->
+    </div>						
+    <!-- Crop and preview -->
 
-<div class="row">
-<div class="col-lg-9">
+    <div class="row">
+      <div class="col-lg-9">
         <!--<div ngf-drop ng-model="myCroppedImage" ngf-pattern="image/*" class="cropArea col-xs-12">
-            <img-crop image="picFile  | ngfDataUrl" area-type="square" result-image-quality="1.0"
-             result-image="croppedDataUrl" ng-init="croppedDataUrl=''"  area-min-size="400"> </img-crop>-->
-             <ui-cropper image="picFile" result-image="myCroppedImage" area-type="rectangle"  url-blob="myCroppedImage1"></ui-cropper>
-            
-          <!--</div>-->
-</div>
-<!--<div class="col-lg-3">
-    <img ng-src="{{croppedDataUrl}}" class="image-preview preview-lg"/>
-    <img ng-src="{{croppedDataUrl}}" class="image-preview preview-md"/>
-    <img ng-src="{{croppedDataUrl}}" class="image-preview preview-sm"/>
-<div class="image-preview preview-lg"></div>
-<div class="image-preview preview-md"></div>
-<div class="image-preview preview-sm"></div>
-</div>-->
-</div>
-<noscript> 
-<p>Please enable JavaScript to use file uploader.</p>
-<!-- or put I could put an upload form here -->
-</noscript>
-</div>
-<div id="Error_m" class="mr-bottom-5"></div>
-<div class="modal-footer pro_pic_edit_box_content_footer" onclick="timeout()">
-<button type="submit" ng-click="uploads(myCroppedImage)" class="btn btn-primary image-save">Done</button>
-<button type="button" class="btn btn-default"  ng-click="closemodel()">Cancel</button>
-</div>
+          <img-crop image="picFile  | ngfDataUrl" area-type="square" result-image-quality="1.0" result-image="croppedDataUrl" ng-init="croppedDataUrl=''"  area-min-size="400"> </img-crop>-->
+          <ui-cropper image="picFile" result-image="myCroppedImage" area-type="rectangle"  url-blob="myCroppedImage1"></ui-cropper> 
+        <!--</div>-->
+      </div>
+      <!--<div class="col-lg-3">
+        <img ng-src="{{croppedDataUrl}}" class="image-preview preview-lg"/>
+        <img ng-src="{{croppedDataUrl}}" class="image-preview preview-md"/>
+        <img ng-src="{{croppedDataUrl}}" class="image-preview preview-sm"/>
+        <div class="image-preview preview-lg"></div>
+        <div class="image-preview preview-md"></div>
+        <div class="image-preview preview-sm"></div>
+      </div>-->
+    </div>
+    <noscript> 
+      <p>Please enable JavaScript to use file uploader.</p>
+      <!-- or put I could put an upload form here -->
+    </noscript>
+  </div>
 
-<script type="text/javascript"> 
-/*$("#frmprofileimageupload").submit(function(){
-setTimeout(function(){
-window.location.reload(1);
-}, 300);
-});*/
-</script>
-</form>
+  <div id="Error_m" class="mr-bottom-5"></div>
 
-<script type="text/javascript" src="js/userprofile/user_profile_status.js"></script>
+  <div class="modal-footer pro_pic_edit_box_content_footer" onclick="timeout()">
+    <button type="submit" ng-click="uploads(myCroppedImage)" class="btn btn-primary image-save">Done</button>
+    <button type="button" class="btn btn-default"  ng-click="closemodel()">Cancel</button>
+  </div>
+
+  <script type="text/javascript"> 
+    /*$("#frmprofileimageupload").submit(function(){
+    setTimeout(function(){
+    window.location.reload(1);
+    }, 300);
+    });*/
+  </script>
+
+
+  <script type="text/javascript" src="js/userprofile/user_profile_status.js"></script>
 
 <!--<script type="text/javascript">
 $('#ProfileImageInput').change(function(event) {
@@ -102,4 +137,4 @@ $('#Error_m').html('<div class="alert alert-danger alert-dismissable fade in"><a
 
 });
 </script> -->
-                </div>
+</div>
