@@ -44,17 +44,24 @@
               <div class="col-md-12 col-xs-9 col-sm-6 profileOptnWrap">
                 <div class="profileOptns">
                   <div class="optn optn1">
-                      <i class="atzIcon atzIcon-share"></i>
-                      <p><span>Share</span><span>Profile</span></p>
+                      <button>
+                        <i class="atzIcon atzIcon-share"></i>
+                        <p><span>Share</span><span>Profile</span></p>
+                      </button>
                   </div>
                   <div class="optn optn2">
-                      <!-- <i class="atzIcon tatistics"></i> -->
-                      <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                      <p><span>Engagement</span><span>Statistics</span></p>
+                      <button>
+                        <i class="atzIcon atzIcon-bars"></i>
+                        <!-- <i class="fa fa-bar-chart" aria-hidden="true"></i> -->
+                        <p><span>Engagement</span><span>Statistics</span></p>
+                      </button>
                   </div>
                   <div class="optn optn3">
-                      <i class="atzIcon atzIcon-mail"></i>
-                      <p><span>Contact</span><span>Me</span></p>
+                      <button ng-click="editprofile()">
+                        <i class="atzIcon atzIcon-pencil"></i>
+                        <!-- <i class="atzIcon atzIcon-mail"></i> -->
+                        <p><span>Edit</span><span>Profile</span></p>
+                      </button>
                   </div>
                 </div>
               </div>
@@ -77,7 +84,7 @@
                     <button>Download Profile</button>
                   </div> -->
                 </div>
-                <button class="editProfileDesc" ng-click="editprofile()"><span>Edit</span><i class="fa fa-edit"></i></button>
+                <!-- <button class="editProfileDesc" ng-click="editprofile()"><span>Edit</span><i class="fa fa-edit"></i></button> -->
               </div>
               <div class="profileOptions col-xs-12 col-md-3">
                 <div class="ProfileBtnWrap col-xs-12 padd-0">  
@@ -109,16 +116,17 @@
                 <div class="toggleTabWrap col-xs-12">
                   <div class="row profileData"> 
                     <ul class="dataTabs">
-                      <li class="active">All</li>
-                      <li>Portfolio</li>
-                      <li>Experience</li>
-                      <li>Personal</li>
-                      <li>Education</li>
-                      <li>Skill Board</li>
-                      <li>Jobs Posted</li>
-                      <li>Services Listed</li>
-                      <li>Recommendations</li>
+                      <li class="active one">All</li>
+                      <li class="two">Portfolio</li>
+                      <li class="three">Experience</li>
+                      <li class="four">Personal</li>
+                      <li class="five">Education</li>
+                      <li class="six">Skill Board</li>
+                      <li class="seven">Jobs Posted</li>
+                      <li class="eight">Services Listed</li>
+                      <li class="nine">Recommendations</li>
                     </ul>
+                    
                   </div>
                 </div>
               </uib-tab>
@@ -128,9 +136,193 @@
         </div>
       </div>
     </div>
+
+
+
+<!-- <link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/jquery.responsive-tabs/1.5.1/responsive-tabs.css'>
+
+
+
+   <style>
+     /* Tabs container */
+.r-tabs {
+  position: relative;
+
+  background-color: #00c5ad;
+
+  border-top: 1px solid #00c5ad;
+  border-right: 1px solid #00c5ad;
+  border-left: 1px solid #00c5ad;
+  border-bottom: 4px solid #00c5ad;
+  border-radius: 4px;
+
+}
+
+/* Tab element */
+.r-tabs .r-tabs-nav .r-tabs-tab {
+  position: relative;
+  background-color: #00c5ad;
+}
+
+/* Tab anchor */
+.r-tabs .r-tabs-nav .r-tabs-anchor {
+  display: inline-block;
+  padding: 10px 12px;
+
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Disabled tab */
+.r-tabs .r-tabs-nav .r-tabs-state-disabled {
+  opacity: 0.5;
+}
+
+/* Active state tab anchor */
+.r-tabs .r-tabs-nav .r-tabs-state-active .r-tabs-anchor {
+  color: #00c5ad;
+  text-shadow: none;
+
+  background-color: white;
+
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+/* Tab panel */
+.r-tabs .r-tabs-panel {
+  background-color: white;
+
+  border-bottom: 4px solid white;
+
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+}
+
+/* Accordion anchor */
+.r-tabs .r-tabs-accordion-title .r-tabs-anchor {
+  display: block;
+  padding: 10px;
+
+  background-color: #00c5ad;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+/* Active accordion anchor */
+.r-tabs .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor {
+  background-color: #fff;
+  color: #00c5ad;
+  text-shadow: none;
+}
+
+/* Disabled accordion button */
+.r-tabs .r-tabs-accordion-title.r-tabs-state-disabled {
+  opacity: 0.5;
+}
+
+/* Buttons */
+button {
+  display:inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  line-height: 100%;
+
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  vertical-align: middle;
+  font-weight: bold;
+  
+  border: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #00c5ad;
+  box-shadow: 0px 3px 0px 0px #00ab94;
+  
+  cursor: pointer;
+}
+
+/* Info bar */
+.info {
+  display:inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  width: 300px;
+  line-height: 100%;
+
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 14px;
+  color: #00c5ad;
+  border: 2px solid #00ab94;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fff;
+
+  cursor: pointer;
+} 
+   </style> -->
+
+
+
+
+
+<div class="container" ng-app="myApp">
+  <div class="row">
+    <div class="col-lg-12">
+      <div id="responsiveTabs" responsive-tabs>
+        <ul>
+          <li><a href="#tab-1"> Tab 1 </a></li>
+          <li><a href="#tab-2"> Tab 2 </a></li>
+          <li><a href="#tab-3"> Tab3 </a></li>
+        </ul>
+
+        <div id="tab-1"> Content tab 1 </div>
+        <div id="tab-2"> Content tab 2 </div>
+        <div id="tab-3"> Content tab 3 </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js'></script>
+<script src='http://cdn.jsdelivr.net/jquery.responsive-tabs/1.5.1/jquery.responsiveTabs.min.js'></script>
+   <script type="text/javascript">
    
+     var myApp = angular.module('myApp', []);
 
+angular
+  .module('myApp')
+  .directive('responsiveTabs', responsiveTabs);
 
+function responsiveTabs() {
+  return {
+    restrict: 'A',
+    link: function(scope, element, attrs) {
+      element.responsiveTabs({
+        startCollapsed: false
+      });
+
+    }
+  };
+}
+
+   </script>
 </section>
 
 <!-- $( document ).ready(function() {
