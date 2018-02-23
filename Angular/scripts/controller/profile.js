@@ -4,7 +4,14 @@
 angular.
 module('material').
 controller('profileCtrl', ['$scope', '$http', '$rootScope', '$base64', '$timeout', 'Upload',  'Lightbox', '$sce', '$uibModal', 'localStorageService', 'usSpinnerService', '$location', '$anchorScroll', 'sweetAlert','$filter','mediaService',function ($scope, $http, $rootScope, $base64, $timeout, Upload, Lightbox, $sce, $uibModal, localStorageService, usSpinnerService, $location, $anchorScroll, sweetAlert,$filter,mediaService) {
-
+    $scope.cropper = {};
+    $scope.cropper.sourceImage = null;
+    $scope.cropper.croppedImage   = null;
+    $scope.bounds = {};
+    $scope.bounds.left = 0;
+    $scope.bounds.right = 0;
+    $scope.bounds.top = 0;
+    $scope.bounds.bottom = 0;
 $scope.profileimagemodel = function(){
 
    

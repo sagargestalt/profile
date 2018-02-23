@@ -1,5 +1,5 @@
 'use strict';
-angular.module('material', ['ngAnimate', 'ngMessages', 'ngResource', 'ui.bootstrap', 'angular-ladda', 'socialLogin', 'base64', 'angularSpinner', 'ngFileUpload', 'ngImgCrop', 'summernote', 'ngTagsInput', 'bootstrapLightbox', 'ngSanitize', 'LocalStorageModule', 'angular-button-spinner', 'hm.readmore','uiCropper']).config(function(socialProvider) {
+angular.module('material', ['ngAnimate', 'ngMessages', 'ngResource', 'ui.bootstrap', 'angular-ladda', 'socialLogin', 'base64', 'angularSpinner', 'ngFileUpload', 'ngImgCrop', 'summernote', 'ngTagsInput', 'bootstrapLightbox', 'ngSanitize', 'LocalStorageModule', 'angular-button-spinner', 'hm.readmore','angular-img-cropper']).config(function(socialProvider) {
     socialProvider.setLinkedInKey('86apemkrm9tjqk');
     socialProvider.setGoogleKey('248318198762-cpk6balnql83162035458uk1hjkgi420.apps.googleusercontent.com');
 }).config(function(LightboxProvider) {
