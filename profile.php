@@ -113,11 +113,11 @@ var userhandle = '<?php echo $this->uri->segment(2); ?>';
       <div class="profileDataWrap col-xs-12">  
         <div class="row"> 
           <div class="toggleWrap col-xs-12 col-sm-9"> 
-            <uib-tabset active="active">
+            <uib-tabset active="active" class="toggleTabs">
               <uib-tab index="0" heading="Profile Overview">
                 <div class="toggleTabWrap col-xs-12">
                   <div class="row profileData"> 
-                    <ul class="dataTabs">
+                    <!-- <ul class="dataTabs">
                       <li class="active one">All</li>
                       <li class="two">Portfolio</li>
                       <li class="three">Experience</li>
@@ -127,7 +127,19 @@ var userhandle = '<?php echo $this->uri->segment(2); ?>';
                       <li class="seven">Jobs Posted</li>
                       <li class="eight">Services Listed</li>
                       <li class="nine">Recommendations</li>
-                    </ul>
+                    </ul> -->
+
+                    <uib-tabset active="active" justified="true" class="dataTabs">
+                      <uib-tab index="0" heading="All">Justified content</uib-tab>
+                      <uib-tab index="1" heading="Portfolio">Short Labeled Justified content</uib-tab>
+                      <uib-tab index="2" heading="Experience">Long Labeled Justified content</uib-tab>
+                      <uib-tab index="3" heading="Personal">Long Labeled Justified content</uib-tab>
+                      <uib-tab index="4" heading="Education">Long Labeled Justified content</uib-tab>
+                      <uib-tab index="5" heading="Skill Board">Long Labeled Justified content</uib-tab>
+                      <uib-tab index="6" heading="Jobs Posted">Long Labeled Justified content</uib-tab>
+                      <uib-tab index="7" heading="Services Listed">Long Labeled Justified content</uib-tab>
+                      <uib-tab index="8" heading="Recommendations">Long Labeled Justified content</uib-tab>
+                    </uib-tabset>
                     
                   </div>
                 </div>
@@ -140,8 +152,14 @@ var userhandle = '<?php echo $this->uri->segment(2); ?>';
     </div>
 
 
+<div class="clearfix"></div>
 
- <!--<link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/jquery.responsive-tabs/1.5.1/responsive-tabs.css'>
+<uib-tabset active="active" justified="true">
+    <uib-tab index="0" heading="Justified">Justified content</uib-tab>
+    <uib-tab index="1" heading="SJ">Short Labeled Justified content</uib-tab>
+    <uib-tab index="2" heading="Long Justified">Long Labeled Justified content</uib-tab>
+  </uib-tabset>
+ <!-- <link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/jquery.responsive-tabs/1.5.1/responsive-tabs.css'>
 
 
 
@@ -278,7 +296,7 @@ button {
 
   cursor: pointer;
 } 
-   </style> -->
+   </style> 
 
 
 
@@ -304,7 +322,7 @@ button {
 
 
    
-</section>
+</section> -->
 
 <!-- $( document ).ready(function() {
         
