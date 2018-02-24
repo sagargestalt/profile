@@ -56,9 +56,10 @@ $scope.uploads = function (myCroppedImage1) {
      
     
     Upload.upload({
-      url: '/uplod',
+      url: 'http://staging.artistize.com/PROFILEV1/Profile/profile_cover_image',
       data: {
-        project_cover_image: Upload.dataUrltoBlob(myCroppedImage1),
+        profile_cover_image: Upload.dataUrltoBlob(myCroppedImage1),
+        user_id:3214
         
       },
     }).then(function (response) {
